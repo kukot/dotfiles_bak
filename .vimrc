@@ -1,3 +1,5 @@
+scriptencoding utf8
+set encoding=utf-8
 syntax on
 " set no compatible
 set nocompatible
@@ -15,4 +17,3 @@ set bg=dark
 colorscheme gruvbox
 
 " auto mvn compile on changes
-
