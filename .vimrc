@@ -30,9 +30,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'takac/vim-hardtime'
 Plug 'ryanoasis/vim-devicons'
+Plug 'posva/vim-vue'
 call plug#end()
 
-"change working directory
 "configuration
 let g:hardtime_default_on= 1
+"NERDTree config
 nnoremap <C-n> :NERDTreeToggle<CR>

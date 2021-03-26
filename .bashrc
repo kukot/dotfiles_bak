@@ -9,7 +9,8 @@
 # PS1='[\u@\h \W]\$ '
 export AWT_TOOLKIT="MToolkit wmname LG3D"
 export _JAVA_AWT_WM_NONREPARENTING=1
-export JAVA_HOME=/home/cucot/.local/sdk/jdk-11.0.2
+#export JAVA_HOME=/home/cucot/.local/sdk/jdk-11.0.2
+export JAVA_HOME=/home/cucot/.local/sdk/jdk1.8.0_281
 export PATH=$PATH:$JAVA_HOME/bin
 
 #BEGIN: input method
@@ -23,6 +24,10 @@ ibus-daemon -drx
 export MVN_HOME=/home/cucot/.local/sdk/apache-maven-3.6.3
 export CUSTOM_SCRIPT=/home/cucot/.script
 export PATH=$PATH:$MVN_HOME/bin:$CUSTOM_SCRIPT
+export FLUTTER_HOME=/home/cucot/.local/sdk/flutter
+export ANDROID_HOME=/home/cucot/.local/sdk/androidsdk
+export CHROME_EXECUTABLE=/usr/bin/chromium
+export PATH=$PATH:$FLUTTER_HOME/bin:$ANDROID_HOME/bin
 alias dualmonitor='xrandr --output eDP1 --mode 1920x1080 --pos 0x0 --output HDMI1 --mode 3840x2160 --pos 1920x0'
 alias lapmonitoroff='xrandr --output eDP1 --off'
 alias hdmi4k='xrandr --output HDMI1 --mode 3840x2160'
