@@ -5,7 +5,7 @@ syntax on
 set nocompatible
 set path+=**
 set wildmenu
-set wildignore+=*.o,*.pdf,*.obj,*.jpg,*.png
+set wildignore+=*.o,*.pdf,*.obj,*.jpg,*.png,*.class
 set number
 set relativenumber
 
@@ -33,7 +33,6 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "change working directory
-cd d:\workspace
 "configuration
 let g:hardtime_default_on= 1
 nnoremap <C-n> :NERDTreeToggle<CR>
