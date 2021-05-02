@@ -36,3 +36,7 @@ source "$HOME/.cargo/env"
 alias scanwifi='connmanctl scan wifi'
 alias showwifi='connmanctl services'
 alias updatetime='sudo ntpdate -u ntp.ubuntu.com'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/cucot/.sdkman"
+[[ -s "/home/cucot/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cucot/.sdkman/bin/sdkman-init.sh"
