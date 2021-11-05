@@ -1,2 +1,5 @@
 alias vim=nvim
 alias l='ls -la'
+alias connbno='ssh -p 50002 localhost -l user1'
+alias connapp='ssh -p 50005 localhost -l user1'
+alias connnotary='ssh -p 50002 localhost -l user1'
