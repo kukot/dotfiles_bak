@@ -21,4 +21,12 @@ if [[ -e "$HOME/.config/nvim" ]]; then
 else
     ln -s $scriptdir/nvim $HOME/.config/nvim
 fi
+
+#Configuring i3
+if [[ -e "$HOME/.config/i3" ]]; then
+    echo "i3 config already exists, please manually modify the config yourself"
+else
+    ln -s $scriptdir/i3 $HOME/.config/i3
+fi
+
 #echo "#This file is automatically created to fit the convention, ignored in git, feel safe to save your token here" > $HOME/.tokenrc
