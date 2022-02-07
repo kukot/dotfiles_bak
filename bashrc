@@ -7,6 +7,7 @@ if [ -f /etc/profile ]; then
 	. /etc/profile
 fi
 
+. "$HOME/.cargo/env"
 source $HOME/.tokenrc
 source $HOME/.aliasrc
 source $HOME/.sdkrc
