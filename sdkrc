@@ -8,3 +8,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 #custom java11_home for using with kotlin-language-server
 export JAVA11_HOME=$HOME/.sdkman/candidates/java/11-amzn
+export ESSDOCS_ENABLED=false
