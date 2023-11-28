@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import subprocess
+
+# Function to get the current value of a command
+def get_current_input_method():
+    command = "ibus engine"
+    result = subprocess.run(command, stdout=subprocess.PIPE, text=True, shell=True)
+    return result.stdout.strip()
+
+# Function to execute command based on the value
+def switch_input_method(current_input_method):
+    if current_input_method == "BambooUs":
+        subprocess.run("ibus engine Bamboo::Us", shell=True)
+    elif current_input_method == "Bamboo::Us":
+        subprocess.run("ibus engine BambooUs", shell=True)
+
+# Get the current value
+current_value = get_current_input_method()
+
+# Execute command based on the value
+switch_input_method(current_value)
