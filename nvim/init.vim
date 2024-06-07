@@ -50,8 +50,6 @@ set bg=dark
 set softtabstop=0 shiftwidth=4 expandtab
 set autoindent
 
-"set coc node executable path explicitly
-let g:coc_node_path='$HOME/.nvm/versions/node/v14.17.6/bin/node'
 "plugin using VimPlug
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -68,12 +66,16 @@ Plug 'jdhao/better-escape.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'neovim/nvim-lspconfig'
 "Plug 'hrsh7th/cmp-nvim-lsp'
 "Plug 'hrsh7th/cmp-buffer'
 "Plug 'hrsh7th/nvim-cmp'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'mfussenegger/nvim-jdtls'
+Plug 'mfussenegger/nvim-jdtls'
+Plug 'mfussenegger/nvim-lint'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'mhartington/formatter.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 call plug#end()
 "setting gruvbox
 autocmd vimenter * ++nested colorscheme gruvbox
@@ -98,5 +100,6 @@ set completeopt=menu,menuone,noselect
 "    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
 "  augroup end
 "endif
-"coc.nvim config
-source ~/.config/nvim/coc.vim
+>lua
+   require("mason").setup()
+<

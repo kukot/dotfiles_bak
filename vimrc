@@ -17,7 +17,6 @@ if has('gui_running')
     set guifont=JetBrainsMono\ NF:h10
 endif
 set bg=dark
-colorscheme gruvbox
 
 "TAB configuration
 "set tabstop=4
@@ -26,6 +25,8 @@ set autoindent
 
 "plugin using VimPlug
 call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'bfrg/vim-cpp-modern'
 Plug 'preservim/nerdtree'
 "Plug 'takac/vim-hardtime'
 Plug 'ryanoasis/vim-devicons'
@@ -39,6 +40,8 @@ Plug 'jdhao/better-escape.vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
+colorscheme gruvbox
+
 "configuration
 "let g:hardtime_default_on= 1
 "NERDTree config
@@ -46,3 +49,14 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 "enable vim-iced's default key mapping
 let g:iced_enable_default_key_mappings = v:true
 let g:better_espace_intervavl = 200
+
+" cursor setting specific to iTerm
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
